@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Solution 15</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#get_data").click(function(){
+                    $.ajax({url: "https://api.myjson.com/bins/695ra", success: function(result){
+                        $("#container").html("<br> Data:- "+JSON.stringify(result));
+                    }});
+                })
+            })
+            //JSON data
+            /*{
+                "name": "Ani",
+                "age": 22,
+                "dob": "22/06/1996",
+                "gender": "Male"
+              }*/
+        </script>
+    </head>
+    <body>
+        <h2>Solution 15</h2>
+        <div id="main">
+            <button id="get_data">Get Data!</button><br>
+            <div id="container">
+            </div>
+        </div>
+</body>
+</html>

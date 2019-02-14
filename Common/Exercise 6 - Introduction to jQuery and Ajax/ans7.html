@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Solution 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#main_btn").click(function(){
+                $("#main").append("<br><br><button id='alt_btn'>Triggered Button</button>")
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>Solution 5</h2>
+    <div id="main">
+        <button id="main_btn">Click Me!</button>
+    </div>
+</body>
+</html>

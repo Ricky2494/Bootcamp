@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Solution 12</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#main").click(function(){
+                    $("#hello").append("<h3> Hello World! </h3>")
+                })
+                $("#child").click(function(){
+                    $("#main").off("click");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h2>Solution 12</h2>
+        <div id="main" style="width:400px; height:400px; background-color: turquoise">
+            <div id="child" style="width:200px; height:200px; margin-left: 50px; background-color:yellowgreen">
+            </div>
+        </div>
+        <div id="hello">
+        </div>
+</body>
+</html>

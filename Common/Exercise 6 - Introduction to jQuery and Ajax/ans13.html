@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Solution 13</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var max = -1;
+            $(".main > div").each(function() {
+                var h = $(this).height();
+                max = h > max ? h : max;
+            });
+            $("#container").append("<h2> Max element's height is" + max + "</h2>")
+        })
+    </script>
+</head>
+<body>
+    <h2>Solution 13</h2>
+    <div class="main">
+        <div id="a" style="background-color: teal; width:20px;height:30px"></div><br>
+        <div id="b" style="background-color: blue; width:20px;height:20px"></div><br>
+        <div id="c" style="background-color: yellow; width:20px;height:30px"></div><br>
+        <div id="d" style="background-color: greenyellow; width:20px;height:40px"></div><br>
+        <div id="e" style="background-color: red; height:40px;width:20px;"></div><br>
+        <div id="f" style="background-color: violet;width:20px; height:30px"></div><br>
+        <div id="g" style="background-color: orange; width:20px;height:70px"></div><br>
+    </div>
+    <div id="container">
+
+    </div>
+</body>
+</html>
