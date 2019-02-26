@@ -30,30 +30,35 @@ Rule 3: A convenience initializer must ultimately call a designated initializer
 /*
  3.Using convenience Initializers, write-down the Initializers for MOVIE class having basic attributes like title, author, publish_date, etc.
 
+
 class MOVIE{
-    var id:Int = 12345
+    var id:Int
     var name:String
-    var title:String = "Nature"
+    var title:String
     var author:String
     var publish_date:String
     
-    init(name:String, author:String, publish_date:String){
+    init(id: Int, name:String,title: String, author:String, publish_date:String)
+    {
+        self.id = id
         self.name = name
+        self.title = title
         self.author = author
         self.publish_date = publish_date
     }
-    convenience init() {
-        self.init()
+    
+    convenience init(name: String, author: String)
+    {
+        self.init(id: 1234, name: name, title: "Nature", author: author, publish_date: "12/04/2018")
     }
-    var objectofMovie = MOVIE(name: "Hawaayein", author: "Enid Blyton", publish_date: "12/04/19")
-    
-    print(objectofMovie.id)
-    print(objectofMovie.name)
-    print(objectofMovie.title)
-    print(objectofMovie.author)
-    print(objectofMovie.publish_date)
-    
-    */
+}
+var objectOfMovie = MOVIE(name: "Hawaayein",author: "Enid Blyton" )
+   print(objectOfMovie.id)
+    print(objectOfMovie.name)
+    print(objectOfMovie.title)
+    print(objectOfMovie.author)
+    print(objectOfMovie.publish_date)
+*/
 
 /* 4.Declare a structure which can demonstrate the throwable Initializer
 
@@ -73,7 +78,7 @@ class MOVIE{
             
         }
     }
-    let u = User (name: "jacob")
+    let u = User (name: "Anindya")
     let u2 = User (name: nil)
     
     */
@@ -81,10 +86,10 @@ class MOVIE{
 /* ARRAYS
  /*
  1.Create an array containing the 5 different integer values. Write are at least 4 ways to do this.
-var a = [1,2,3,4,5]
-var b:[Int] = [1,2,34,4,5]
-var c:Array<Int> = [1,2,3,4,5]
-var d = [Int]()
+var array1 = [1,2,3,4,5]
+var array2:[Int] = [1,2,34,4,5]
+var array3:Array<Int> = [1,2,3,4,5]
+var array4 = [Int]()
 */
  /*
 2.Create an immutable array containing 5 city names.
@@ -135,36 +140,34 @@ print(farmAnimals.union(houseAnimals).union(cityAnimals))
 /* DICTIONARY
  1. Create an empty dictionary with keys of type String and values of type Int and assign it to a variable in as many ways as you can think of (there's at least 4 ways).
 
- myDictionary1: Dictionary<String, Int> = [:]
- myDictionary2: [String: Int] = [:]
- myDictionary3 = Dictionary<String, Int>()
- myDictionary4 = [String: Int]()
+ var myDictionary1: Dictionary<String, Int> = [:]
+ var myDictionary2: [String: Int] = [:]
+ var myDictionary3 = Dictionary<String, Int>()
+ var myDictionary4 = [String: Int]()
 */
 
 
 /* 2. Create a mutable dictionary named secretIdentities where the key value pairs are "Hulk" -> "Bruce Banner", "Batman" -> "Bruce Wayne", and "Superman" -> "Clark Kent".
 
-let myDictionary1: Dictionary<String, Int> = [:]
-let myDictionary2: [String: Int] = [:]
-let myDictionary3 = Dictionary<String, Int>()
-let myDictionary4 = [String: Int]()
-var airports: [String: Any] = ["CCU": "Calcutta Intl",
-                               "DEL": "Delhi Intl",
-                               "BOM": "Mumbai Intl"]]
-var demo : [String : Any] = ["A" : 1,
-                             "B" : 2.0,
-                             "C" : "iOS",
-                             "D" : ["A1", "A2", "A3"],
-                             "E"  :airports]
-print(demo["E"])
-
-*/
-
-/* 3. Create a nesters structure of Key-value pair.
  var secretIdentities = [String:String]()
  secretIdentities["Hulk"] = "Bruce Banner"
  secretIdentities["Batman"]  = "Bruce Wayne"
  secretIdentities["Superman"] = "Clark Kent"
+ 
+*/
+
+/* 3. Create a nesters structure of Key-value pair.
+ 
+ var airports: [String: Any] = ["CCU": "Calcutta Intl",
+ "DEL": "Delhi Intl",
+ "BOM": "Mumbai Intl"]]
+ var demo : [String : Any] = ["A" : 1,
+ "B" : 2.0,
+ "C" : "iOS",
+ "D" : ["A1", "A2", "A3"],
+ "E"  :airports]
+ print(demo["E"])
+
  */
 
 /* 4. Print all the keys in the dic
