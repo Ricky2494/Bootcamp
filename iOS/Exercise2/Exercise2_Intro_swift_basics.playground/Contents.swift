@@ -46,7 +46,6 @@ professionalArray.append(ProfessionalInformation(employeeID: 03, name: "Akash", 
 professionalArray.append(ProfessionalInformation(employeeID: 04, name: "Spandan", department: definedDepartment.FullStack, branch: definedBranch.Japan, experience: 2))
 professionalArray.append(ProfessionalInformation(employeeID: 007, name: "James Bond", department: definedDepartment.Web, branch: definedBranch.America, experience: 5))
 
-
 //Question 1: create a third employee structure that contains the information from both based on common id.
 struct Employee {
     var employeeID: Int
@@ -76,66 +75,82 @@ for index in empArray {
 }
 
 //Question 2: write a function that takes the two structure and give me list of all the employee that live in certain country
-func answer2(country: String) -> String{
+func answer2(country: String) -> [Employee]{
     print("\nAnswer 2:")
-    for personalEmp in personalArray {
-        for professionalEmp in professionalArray{
-            if (personalEmp.employeeID == professionalEmp.employeeID && personalEmp.country==country)
+    var result: [Employee]
+    for personalEmp in 0...personalArray.count-1 {
+        for professionalEmp in 0...professionalArray.count-1 {
+            if (empArray[personalEmp].employeeID == empArray[professionalEmp].employeeID && empArray[personalEmp].country==country)
             {
-                print(personalEmp)
+                result = (empArray[personalEmp])
             }
         }
     }
-    return country
+    return result
 }
-answer2(country: "India")
+var result: [Employee] = answer2(country: "India")
+//for emp in 0...result.count-1 {
+    print(result)
+//}
 
 //Question 3: write a function that give me list of all the employee that live in certain department
-func answer3(department: String) -> String{
+func answer3(department: String) -> [Employee]{
     print("\nAnswer 3:")
-    for emp in empArray {
-        if (emp.department==department)
+    var result = [Employee]()
+    for emp in 0...empArray.count-1 {
+        if (empArray[emp].department==department)
         {
-            print(emp)
-        }
+            result.append(empArray[emp])        }
     }
-    return department
+    return result
 }
-answer3(department: "Android")
+var result3 = answer3(department: "Android")
+for emp in 0...result3.count-1 {
+    print(result3[emp])
+}
 
 //Question 4: write a function that give me list of all the employee that live in same country and work in the same branch.
-func answer4(ans: String) -> String{
-    print(ans)
-    for emp1 in empArray {
-        for emp2 in empArray {
-            if (emp1.country == emp2.branch) {
-                print(emp1)
-            }
+func answer4(ans: String) -> [Employee]{
+    var result = [Employee]()
+    for emp1 in 0...empArray.count-1 {
+        for emp2 in 0...empArray.count-1 {
+            if (empArray[emp1].country == empArray[emp2].branch) {
+                result.append(empArray[emp2])                    }
         }
     }
-    return ans
+    return result
 }
-answer4(ans: "\nAnswer 4:")
+var result4 = answer4(ans: "answer 4")
+for emp3 in 0...result4.count-1 {
+    print(result4[emp3])
+}
 
 //Question 5: write a function that return me list of all the employee name that has a hobby and with their experience.
-func answer5(ans :String) -> String{
-    print(ans)
-    for emp in empArray {
-        print("ID: \(emp.employeeID), Name: \(emp.name), Hobbies: \(emp.hobbies ?? "NA"), Experience: \(emp.experience)")
-    }
-    return ans
+func answer5(ans :String) -> [Employee]{
+    var result = [Employee]()
+    for emp in 0...empArray.count-1 {
+        print("ID: \(empArray[emp].employeeID), Name: \(empArray[emp].name), Hobbies: \(empArray[emp].hobbies ?? "NA"), Experience: \(empArray[emp].experience)")
+             }
+    return result
 }
-answer5(ans: "\nAnswer 5:")
+
+var result5 = answer5(ans: "answer 5")
+for emp5 in 0...result5.count-1 {
+    print(result5[emp5])
+}
 
 //Question 6: write a function that return me list of all the employee name that starts with any “S”
-func answer6(prefix: String) -> String{
+func answer6(prefix: String) -> [Employee]{
     print("\nAnswer6")
-    for emp in empArray {
-        if (emp.name.prefix(1)==prefix) {
-            print(emp)
+    for emp6 in empArray {
+        if (empArray[emp6].name.prefix(1)==prefix) {
+            print(empArray[emp6].name)
         }
     }
     return prefix
 
 }
-answer6(prefix: "S")
+var result6 = answer6(ans: "answer 6")
+for emp6 in 0...result6.count-1 {
+    print(result6[emp6])
+}
