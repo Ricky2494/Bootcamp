@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Rk-E2-huA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Footwear-->
+        <scene sceneID="k2d-H8-h2Z">
+            <objects>
+                <viewController id="Auk-mE-Cph" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fmG-nd-PCC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the footwear section sir!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRl-1f-m3Y">
+                                <rect key="frame" x="45" y="160" width="280" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72021032149999997" blue="0.1466364557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ckz-6c-fTb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Footwear" id="IAf-9D-O4d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdh-rG-07J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="131.78410794602701"/>
+        </scene>
+        <!--Accessories-->
+        <scene sceneID="t7Y-bY-nHl">
+            <objects>
+                <viewController id="uFa-w4-cli" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SdM-gX-T3T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the accessories section sir!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buy-pP-hbd">
+                                <rect key="frame" x="38" y="189" width="304" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66143100629999996" green="1" blue="0.33107793959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="AJP-pe-IjK"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Accessories" id="fbS-VB-9g3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pt-u4-55Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="808"/>
+        </scene>
+        <!--Shirts-->
+        <scene sceneID="gQn-I0-grP">
+            <objects>
+                <viewController id="vkF-NM-VdB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LF7-6D-a0r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to the shirts section sir!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7S8-lV-Oma">
+                                <rect key="frame" x="60" y="151" width="255" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35600900600000002" green="0.87833061810000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0Az-zy-hug"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shirts" id="8rh-Kz-TYQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7M-OG-QLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="-533.88305847076469"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="z1k-pd-fJh">
+            <objects>
+                <tabBarController id="2Rk-E2-huA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0p0-mz-MIs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vkF-NM-VdB" kind="relationship" relationship="viewControllers" id="vFc-gX-Jgs"/>
+                        <segue destination="Auk-mE-Cph" kind="relationship" relationship="viewControllers" id="x0T-uu-aIX"/>
+                        <segue destination="uFa-w4-cli" kind="relationship" relationship="viewControllers" id="mbn-0w-uFO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUE-q4-Ret" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="-200.14992503748127"/>
+        </scene>
+    </scenes>
+</document>
