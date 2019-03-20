@@ -26,6 +26,7 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
     
     var seconds = 0
     var minutes = 0
+    var hours = 0
     var value:Int = 1
     var timer = Timer()
     var isTimeRunning = false
@@ -36,18 +37,21 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
         tableViewForRecords.isHidden = false
         runTimer()
         isTimeRunning = true
+        playButton.isEnabled = false
+
     }
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(StopWatchController.updateTimer)), userInfo: nil, repeats: true)
     }
     @IBAction func updateTimer() {
+        if hours < 1 {
         if seconds < 9 {
             seconds += 1
             if minutes < 10{
-                stopWatchLabel.text = "0\(minutes):0\(seconds)"
+                stopWatchLabel.text = "0\(hours):0\(minutes):0\(seconds)"
             }
             else{
-                stopWatchLabel.text = "\(minutes):0\(seconds)"
+                stopWatchLabel.text = "0\(hours):\(minutes):0\(seconds)"
             }
             if seconds == 59{
                 seconds = 0
@@ -55,6 +59,7 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
             }
             if minutes == 59{
                 seconds += 1
+                hours += 1
                 minutes = 0
             }
             
@@ -62,10 +67,10 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
         else{
             seconds += 1
             if minutes < 10{
-                stopWatchLabel.text = "0\(minutes):\(seconds)"
+                stopWatchLabel.text = "0\(hours):0\(minutes):\(seconds)"
             }
             else{
-                stopWatchLabel.text = "\(minutes):\(seconds)"
+                stopWatchLabel.text = "0\(hours):\(minutes):\(seconds)"
             }
             if  seconds == 59{
                 seconds = 0
@@ -76,16 +81,20 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
                 minutes = 0
             }
         }
-        
+    }
+        else {
+            stopWatchLabel.text = "\(hours):\(minutes):\(seconds)"
+        }
         
     }
     @IBAction func onReset(){
         isTimeRunning = false
         seconds = 0
         minutes = 0
+        hours = 0
         value = 0
         lap = []
-        stopWatchLabel.text = "0\(minutes):0\(seconds)"
+        stopWatchLabel.text = "0\(hours):0\(minutes):0\(seconds)"
         tableViewForRecords.reloadData()
         timer.invalidate()
         
