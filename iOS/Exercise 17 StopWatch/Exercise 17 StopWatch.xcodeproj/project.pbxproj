@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070D7F75224219A30069D7E8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070D7F73224219A30069D7E8 /* TableViewCell.swift */; };
+		070D7F76224219A30069D7E8 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 070D7F74224219A30069D7E8 /* TableViewCell.xib */; };
 		0770BC12224101DD0087EFF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0770BC11224101DD0087EFF2 /* AppDelegate.swift */; };
 		0770BC17224101DD0087EFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0770BC15224101DD0087EFF2 /* Main.storyboard */; };
 		0770BC19224101DE0087EFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0770BC18224101DE0087EFF2 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070D7F73224219A30069D7E8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		070D7F74224219A30069D7E8 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		0770BC0E224101DD0087EFF2 /* Exercise 17 StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exercise 17 StopWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0770BC11224101DD0087EFF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0770BC16224101DD0087EFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				0770BC1A224101DE0087EFF2 /* LaunchScreen.storyboard */,
 				0770BC1D224101DE0087EFF2 /* Info.plist */,
 				0770BC23224102220087EFF2 /* StopWatchController.swift */,
+				070D7F73224219A30069D7E8 /* TableViewCell.swift */,
+				070D7F74224219A30069D7E8 /* TableViewCell.xib */,
 			);
 			path = "Exercise 17 StopWatch";
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0770BC1C224101DE0087EFF2 /* LaunchScreen.storyboard in Resources */,
+				070D7F76224219A30069D7E8 /* TableViewCell.xib in Resources */,
 				0770BC19224101DE0087EFF2 /* Assets.xcassets in Resources */,
 				0770BC17224101DD0087EFF2 /* Main.storyboard in Resources */,
 			);
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				070D7F75224219A30069D7E8 /* TableViewCell.swift in Sources */,
 				0770BC12224101DD0087EFF2 /* AppDelegate.swift in Sources */,
 				0770BC24224102220087EFF2 /* StopWatchController.swift in Sources */,
 			);

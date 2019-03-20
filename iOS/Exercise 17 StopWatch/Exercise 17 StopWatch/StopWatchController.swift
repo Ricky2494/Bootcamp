@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StopWatchController: UIViewController {
+class StopWatchController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableViewForRecords: UITableView!
     @IBOutlet weak var playButton: UIButton!
@@ -17,13 +17,110 @@ class StopWatchController: UIViewController {
     @IBOutlet weak var stopWatchLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableViewForRecords.dataSource = self
+        let nib = UINib.init(nibName: "TableViewCell", bundle: nil)
+        tableViewForRecords.register(nib, forCellReuseIdentifier: "tableCell")
+        tableViewForRecords.reloadData()
         // Do any additional setup after loading the view.
     }
-    let delay  = DispatchTime.now() + .seconds(60)
-    DispatchQueue.main.asyncAfter( deadline: delay) {
-    stopWatchLabel.text = (String)delay
     
+    var seconds = 0
+    var minutes = 0
+    var value:Int = 1
+    var timer = Timer()
+    var isTimeRunning = false
+    var lap = [Any]()
+    
+    
+    @IBAction func onClick(){
+        tableViewForRecords.isHidden = false
+        runTimer()
+        isTimeRunning = true
+    }
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(StopWatchController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    @IBAction func updateTimer() {
+        if seconds < 9 {
+            seconds += 1
+            if minutes < 10{
+                stopWatchLabel.text = "0\(minutes):0\(seconds)"
+            }
+            else{
+                stopWatchLabel.text = "\(minutes):0\(seconds)"
+            }
+            if seconds == 59{
+                seconds = 0
+                minutes += 1
+            }
+            if minutes == 59{
+                seconds += 1
+                minutes = 0
+            }
+            
+        }
+        else{
+            seconds += 1
+            if minutes < 10{
+                stopWatchLabel.text = "0\(minutes):\(seconds)"
+            }
+            else{
+                stopWatchLabel.text = "\(minutes):\(seconds)"
+            }
+            if  seconds == 59{
+                seconds = 0
+                minutes += 1
+            }
+            if minutes == 59{
+                seconds += 1
+                minutes = 0
+            }
+        }
+        
+        
+    }
+    @IBAction func onReset(){
+        isTimeRunning = false
+        seconds = 0
+        minutes = 0
+        value = 0
+        lap = []
+        stopWatchLabel.text = "0\(minutes):0\(seconds)"
+        tableViewForRecords.reloadData()
+        timer.invalidate()
+        
+    }
+    
+    @IBAction func onRecord(){
+        
+        if isTimeRunning {
+            var time:[Any] = [stopWatchLabel!.text!]
+            value = value + 1
+            lap.insert(time, at: 0)
+            
+            tableViewForRecords.reloadData()
+            
+        }
+        
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  lap.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //lap.reverse()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell") as! TableViewCell!
+        cell?.valueOfLabel(value: lap[indexPath.row])
+        
+        
+        return cell!
+    }
+
+//    let delay  = DispatchTime.now() + .seconds(60)
+//    DispatchQueue.main.asyncAfter( deadline: delay) {
+//    stopWatchLabel.text = (String)delay
+//
     }
 
     /*
@@ -36,4 +133,4 @@ class StopWatchController: UIViewController {
     }
     */
 
-}
+
