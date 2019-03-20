@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Exercise_12" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96W-pI-M3a">
+                        <rect key="frame" x="123" y="5" width="189" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjP-h2-10q">
+                        <rect key="frame" x="123" y="33.5" width="173" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zok-da-plm">
+                        <rect key="frame" x="5" y="5" width="110" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="YIr-t7-UoF"/>
+                            <constraint firstAttribute="height" constant="109.5" id="a6e-cC-7fj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuk-bs-Cdc">
+                        <rect key="frame" x="123" y="62.5" width="173" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLz-Vt-Av4">
+                        <rect key="frame" x="123" y="91" width="173" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="96W-pI-M3a" firstAttribute="leading" secondItem="Zok-da-plm" secondAttribute="trailing" constant="8" id="5zO-Xr-b1J"/>
+                    <constraint firstAttribute="trailing" secondItem="96W-pI-M3a" secondAttribute="trailing" constant="8" id="7XR-px-zFL"/>
+                    <constraint firstItem="Zok-da-plm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="A6t-vr-HX3"/>
+                    <constraint firstItem="Fuk-bs-Cdc" firstAttribute="top" secondItem="AjP-h2-10q" secondAttribute="bottom" constant="8" id="Gu3-lG-RVe"/>
+                    <constraint firstItem="96W-pI-M3a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="JQD-Qm-kok"/>
+                    <constraint firstItem="Zok-da-plm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Qbk-hs-u0k"/>
+                    <constraint firstItem="AjP-h2-10q" firstAttribute="top" secondItem="96W-pI-M3a" secondAttribute="bottom" constant="8" id="Yqy-lK-XEH"/>
+                    <constraint firstAttribute="bottomMargin" relation="lessThanOrEqual" secondItem="nLz-Vt-Av4" secondAttribute="bottom" constant="8" id="Z2h-WS-1c5"/>
+                    <constraint firstItem="nLz-Vt-Av4" firstAttribute="top" secondItem="Fuk-bs-Cdc" secondAttribute="bottom" constant="8" id="axW-nA-dHw"/>
+                    <constraint firstItem="AjP-h2-10q" firstAttribute="leading" secondItem="Zok-da-plm" secondAttribute="trailing" constant="8" id="b6V-7w-Hiz"/>
+                    <constraint firstAttribute="bottom" secondItem="Zok-da-plm" secondAttribute="bottom" constant="5" id="bfq-8D-AfA"/>
+                    <constraint firstItem="Fuk-bs-Cdc" firstAttribute="leading" secondItem="Zok-da-plm" secondAttribute="trailing" constant="8" id="iQ9-Ke-XA3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nLz-Vt-Av4" secondAttribute="trailing" constant="8" id="isM-qS-9Uv"/>
+                    <constraint firstItem="nLz-Vt-Av4" firstAttribute="leading" secondItem="Zok-da-plm" secondAttribute="trailing" constant="8" id="qLX-bm-N5P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Fuk-bs-Cdc" secondAttribute="trailing" constant="8" id="v6W-gK-xZo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="AjP-h2-10q" secondAttribute="trailing" constant="8" id="wmr-kb-azu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressLabel" destination="Fuk-bs-Cdc" id="3cq-Ub-aMm"/>
+                <outlet property="ageLabel" destination="AjP-h2-10q" id="lO7-EN-hS8"/>
+                <outlet property="detailsLabel" destination="nLz-Vt-Av4" id="MWd-md-TJN"/>
+                <outlet property="nameLabel" destination="96W-pI-M3a" id="b7U-1b-h1V"/>
+                <outlet property="userImage" destination="Zok-da-plm" id="0gs-56-XIZ"/>
+            </connections>
+            <point key="canvasLocation" x="140.80000000000001" y="117.84107946026987"/>
+        </tableViewCell>
+    </objects>
+</document>

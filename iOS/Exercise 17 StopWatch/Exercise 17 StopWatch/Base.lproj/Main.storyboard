@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stop Watch Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StopWatchController" customModule="Exercise_17_StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qxf-7u-Gwj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG4-fd-WII">
+                                        <rect key="frame" x="62" y="50" width="251" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="xBm-fg-IQG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2F4-Ke-jKp">
+                                        <rect key="frame" x="32" y="174" width="80" height="80"/>
+                                        <state key="normal" title="Reset" image="reset_image"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmI-fM-Y1f">
+                                        <rect key="frame" x="262" y="174" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Play/Pause" image="play_button"/>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YcW-OH-WeQ">
+                                        <rect key="frame" x="0.0" y="301" width="367" height="338"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1x-v4-q3W">
+                                        <rect key="frame" x="147" y="173" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Record" image="record_button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YcW-OH-WeQ" secondAttribute="trailing" id="HFj-PZ-uB3"/>
+                                    <constraint firstAttribute="bottom" secondItem="YcW-OH-WeQ" secondAttribute="bottom" id="IiU-g0-nDS"/>
+                                    <constraint firstItem="VG4-fd-WII" firstAttribute="top" secondItem="Qxf-7u-Gwj" secondAttribute="top" constant="50" id="PBy-bT-6tj"/>
+                                    <constraint firstItem="VG4-fd-WII" firstAttribute="centerX" secondItem="Qxf-7u-Gwj" secondAttribute="centerX" id="RO1-ao-hI2"/>
+                                    <constraint firstItem="YcW-OH-WeQ" firstAttribute="top" secondItem="2F4-Ke-jKp" secondAttribute="bottom" constant="20" id="hro-wi-XwU"/>
+                                    <constraint firstItem="YcW-OH-WeQ" firstAttribute="leading" secondItem="Qxf-7u-Gwj" secondAttribute="leading" id="wPE-O8-yhh"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qxf-7u-Gwj" secondAttribute="bottom" id="A0Z-ra-Vpx"/>
+                            <constraint firstItem="Qxf-7u-Gwj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NVD-oF-Nft"/>
+                            <constraint firstItem="Qxf-7u-Gwj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZIF-32-QEJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qxf-7u-Gwj" secondAttribute="trailing" id="gVi-Dd-nor"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="BmI-fM-Y1f" id="AjY-EF-3PO"/>
+                        <outlet property="recordingButton" destination="m1x-v4-q3W" id="6nV-yj-oyI"/>
+                        <outlet property="resetButton" destination="2F4-Ke-jKp" id="UTh-Qa-sSt"/>
+                        <outlet property="stopWatchLabel" destination="VG4-fd-WII" id="biX-15-31P"/>
+                        <outlet property="tableViewForRecords" destination="YcW-OH-WeQ" id="yKd-f4-8KH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play_button" width="512" height="512"/>
+        <image name="record_button" width="225" height="225"/>
+        <image name="reset_image" width="225" height="225"/>
+    </resources>
+</document>
