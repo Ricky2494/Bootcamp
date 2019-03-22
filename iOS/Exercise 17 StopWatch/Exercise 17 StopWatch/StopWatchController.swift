@@ -120,7 +120,7 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
         tableViewForRecords.reloadData()
         tableViewForRecords.isHidden = true
         playButton.isEnabled = true
-        playButton.setImage(playButtonPic, for: .normal)
+        playButton.setImage(playButtonPic, for: .normal) 
         timer.invalidate()
         
     }
