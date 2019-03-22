@@ -60,12 +60,12 @@
 			children = (
 				0770BC11224101DD0087EFF2 /* AppDelegate.swift */,
 				0770BC15224101DD0087EFF2 /* Main.storyboard */,
-				0770BC18224101DE0087EFF2 /* Assets.xcassets */,
-				0770BC1A224101DE0087EFF2 /* LaunchScreen.storyboard */,
-				0770BC1D224101DE0087EFF2 /* Info.plist */,
 				0770BC23224102220087EFF2 /* StopWatchController.swift */,
 				070D7F73224219A30069D7E8 /* TableViewCell.swift */,
 				070D7F74224219A30069D7E8 /* TableViewCell.xib */,
+				0770BC18224101DE0087EFF2 /* Assets.xcassets */,
+				0770BC1A224101DE0087EFF2 /* LaunchScreen.storyboard */,
+				0770BC1D224101DE0087EFF2 /* Info.plist */,
 			);
 			path = "Exercise 17 StopWatch";
 			sourceTree = "<group>";

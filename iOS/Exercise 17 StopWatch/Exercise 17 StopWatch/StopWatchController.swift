@@ -16,7 +16,9 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var stopWatchLabel: UILabel!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        tableViewForRecords.isHidden = true
         tableViewForRecords.dataSource = self
         let nib = UINib.init(nibName: "TableViewCell", bundle: nil)
         tableViewForRecords.register(nib, forCellReuseIdentifier: "tableCell")
@@ -31,16 +33,36 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
     var timer = Timer()
     var isTimeRunning = false
     var lap = [Any]()
-    
+    var pause = true
+    let playButtonPic = UIImage(named: "play_button")
+    let pauseButtonPic = UIImage(named: "pause_button")
     
     @IBAction func onClick(){
-        tableViewForRecords.isHidden = false
-        runTimer()
-        isTimeRunning = true
-        playButton.isEnabled = false
+        if pause {
+            pause = false
+            playButton.setImage(pauseButtonPic, for: .normal)
+            runTimer()
+            isTimeRunning = true
+            //tableViewForRecords.isHidden = false
+            
+        }
+        else {
+            pause = true
+            playButton.setImage(playButtonPic, for: .normal)
+            timer.invalidate()
+            isTimeRunning = false
+            //tableViewForRecords.isHidden = false
+
+        }
+       // tableViewForRecords.isHidden = true
+//        isTimeRunning = true
+//        playButton.isEnabled = false
 
     }
+    
+    
     func runTimer() {
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(StopWatchController.updateTimer)), userInfo: nil, repeats: true)
     }
     @IBAction func updateTimer() {
@@ -96,6 +118,9 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
         lap = []
         stopWatchLabel.text = "0\(hours):0\(minutes):0\(seconds)"
         tableViewForRecords.reloadData()
+        tableViewForRecords.isHidden = true
+        playButton.isEnabled = true
+        playButton.setImage(playButtonPic, for: .normal)
         timer.invalidate()
         
     }
@@ -103,10 +128,10 @@ class StopWatchController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func onRecord(){
         
         if isTimeRunning {
+            tableViewForRecords.isHidden = false
             var time:[Any] = [stopWatchLabel!.text!]
             value = value + 1
             lap.insert(time, at: 0)
-            
             tableViewForRecords.reloadData()
             
         }

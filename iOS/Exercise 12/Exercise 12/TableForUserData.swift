@@ -62,8 +62,7 @@ class TableForUserData: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.addressLabel.text = arrayOfUserData[indexPath.row].addressOfUser
         cell.detailsLabel.text = arrayOfUserData[indexPath.row].detailsOfUser
         
-        
-        
+
         return cell
     }
     
