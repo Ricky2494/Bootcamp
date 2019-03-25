@@ -18,7 +18,7 @@ class FourthPage: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func CallFifthPage() {
+    @IBAction func pushFifthPage() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "FifthPage")
         self.navigationController?.pushViewController(controller, animated: true)

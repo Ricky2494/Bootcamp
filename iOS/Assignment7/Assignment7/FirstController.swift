@@ -11,6 +11,7 @@ import UIKit
 class FirstController: UIViewController {
     @IBOutlet var label: UILabel!
     @IBOutlet weak var buttonPushSecond: UIButton!
+    @IBOutlet var dataTextfield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,15 +19,15 @@ class FirstController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    @IBAction func PushSecond() {
+    @IBAction func pushSecondPage() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "SecondPage")
         self.navigationController?.pushViewController(controller, animated: true)
         
     }
-    @IBAction func PresentSecondPage() {
-        let controller = storyboard!.instantiateViewController(withIdentifier: "SecondPage")
-        self.present(controller, animated: true, completion: nil)
+    @IBAction func presentSecondPage() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "SecondPage")
+        self.present(controller!, animated: true, completion: nil)
     }
     
 
@@ -51,11 +52,11 @@ Question no .5 ---- What is a Segue?
 
  Explore diff between Xib's And ViewController and create a short note on its difference.
  
- Storyboards are an exciting feature first introduced in iOS 5 that save time building user
- interfaces for your apps. Storyboards allow you to prototype and design multiple view
- controller views within one file.Before Storyboards you had to use XIB files and you could
- only use one XIB file per view (UITableViewCell, UITableView or other supported UIView
- types).
+View controllers are the foundation of your app’s internal structure. Every app has at least
+ one view controller, and most apps have several. Each view controller manages a portion of
+ your app’s user interface as well as the interactions between that interface and the
+ underlying data. View controllers also facilitate transitions between different parts of
+ your user interface.
 
  XIB stands for the XML Interface Builder. Interface Builder is a software application which
  allows you to develop Graphical User Interface with the help of Cocoa and carbon. The
