@@ -58,11 +58,11 @@
 			children = (
 				07CDA1B82248E745000D48DD /* AppDelegate.swift */,
 				07CDA1BA2248E745000D48DD /* ViewController.swift */,
+				07CDA1CA2248F9DA000D48DD /* SecondViewController.swift */,
 				07CDA1BC2248E745000D48DD /* Main.storyboard */,
 				07CDA1BF2248E747000D48DD /* Assets.xcassets */,
 				07CDA1C12248E747000D48DD /* LaunchScreen.storyboard */,
 				07CDA1C42248E747000D48DD /* Info.plist */,
-				07CDA1CA2248F9DA000D48DD /* SecondViewController.swift */,
 			);
 			path = "Exercise 16 Notification";
 			sourceTree = "<group>";

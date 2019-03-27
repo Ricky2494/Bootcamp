@@ -34,16 +34,6 @@
                                                 <color key="backgroundColor" red="0.66666668650000005" green="0.48404871719999998" blue="0.19510732519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="SAn-b2-ea6" secondAttribute="bottom" id="5cg-vr-kTT"/>
-                                            <constraint firstAttribute="bottom" secondItem="Unm-MW-2ES" secondAttribute="bottom" id="7zi-G5-8VW"/>
-                                            <constraint firstItem="Unm-MW-2ES" firstAttribute="top" secondItem="zrb-QP-auM" secondAttribute="top" id="DkX-di-erK"/>
-                                            <constraint firstAttribute="trailing" secondItem="Unm-MW-2ES" secondAttribute="trailing" id="KlP-eu-ogl"/>
-                                            <constraint firstItem="SAn-b2-ea6" firstAttribute="leading" secondItem="zrb-QP-auM" secondAttribute="leading" id="MaK-P0-hCY"/>
-                                            <constraint firstItem="Unm-MW-2ES" firstAttribute="leading" secondItem="SAn-b2-ea6" secondAttribute="trailing" id="NAh-17-b76"/>
-                                            <constraint firstItem="SAn-b2-ea6" firstAttribute="top" secondItem="zrb-QP-auM" secondAttribute="top" id="p7e-5x-ern"/>
-                                            <constraint firstItem="Unm-MW-2ES" firstAttribute="leading" secondItem="SAn-b2-ea6" secondAttribute="trailing" id="p9P-D0-alT"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2UH-hu-pfV">
                                         <rect key="frame" x="0.0" y="319" width="356" height="319"/>

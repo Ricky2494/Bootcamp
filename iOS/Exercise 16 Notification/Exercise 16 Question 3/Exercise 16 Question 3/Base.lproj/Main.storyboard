@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I5Y-fo-dab">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise_16_Question_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter your Message here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qWJ-83-asP">
+                                <rect key="frame" x="34" y="110" width="287" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BbA-Lr-Thf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2s-um-nWL">
+                                <rect key="frame" x="34" y="190" width="270" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Vze-5Y-62d"/>
+                                </constraints>
+                                <state key="normal" title="Notification Button"/>
+                                <connections>
+                                    <action selector="buttonScheduleNotificationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jB7-S8-tEf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9V-6l-Xli">
+                                <rect key="frame" x="34" y="270" width="287" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gzx-oB-UXb"/>
+                                </constraints>
+                                <state key="normal" title="Clear Notifications"/>
+                                <connections>
+                                    <action selector="buttonClearAllNotificationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cm-ox-RaN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l2s-um-nWL" secondAttribute="trailing" constant="71" id="7nH-86-7qw"/>
+                            <constraint firstItem="x9V-6l-Xli" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="Ake-yc-e31"/>
+                            <constraint firstItem="x9V-6l-Xli" firstAttribute="top" secondItem="l2s-um-nWL" secondAttribute="bottom" constant="40" id="C0h-RI-yws"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qWJ-83-asP" secondAttribute="trailing" constant="54" id="DBk-xi-Tir"/>
+                            <constraint firstItem="l2s-um-nWL" firstAttribute="top" secondItem="qWJ-83-asP" secondAttribute="bottom" constant="40" id="GYp-jd-Aeb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x9V-6l-Xli" secondAttribute="trailing" constant="54" id="HFl-Vb-ByA"/>
+                            <constraint firstItem="l2s-um-nWL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="Pnk-xK-i2d"/>
+                            <constraint firstItem="qWJ-83-asP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="dSg-Xg-MEe"/>
+                            <constraint firstItem="qWJ-83-asP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="46" id="iQZ-gC-Xvn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Cg-MT-gBb"/>
+                    <connections>
+                        <outlet property="messageTextfield" destination="qWJ-83-asP" id="MxM-Tn-OTv"/>
+                        <outlet property="notifyButton" destination="l2s-um-nWL" id="FYg-kw-awv"/>
+                        <outlet property="resetButton" destination="x9V-6l-Xli" id="99m-Mt-eJ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="131.78410794602701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AwV-Iv-hke">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I5Y-fo-dab" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z0R-Z1-hrY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gb9-bC-LRd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKm-E2-Fm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
