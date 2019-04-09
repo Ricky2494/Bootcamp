@@ -32,9 +32,14 @@ class Question7POP1: UIViewController , ValidatingProtocol {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var nextPage: UIButton!
 
-
-
+    @IBAction func clickNextPage(_sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Question8POP1")
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     @IBAction func submitButton(_ sender: Any) {
         let emailCheck = emailOfUser(email: userNameTextField.text!)
         let passCheck =  passwordOfUser(password: passwordTextField.text!)

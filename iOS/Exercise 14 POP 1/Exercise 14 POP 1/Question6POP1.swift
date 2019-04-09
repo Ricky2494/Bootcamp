@@ -12,7 +12,7 @@ class Question6POP1: UIViewController , Roundable , Borderable {
         
     
     @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,11 @@ class Question6POP1: UIViewController , Roundable , Borderable {
         
         
     }
-    
+    @IBAction func clickNextPage(_sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Question7POP1")
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
     
 }
 
@@ -34,7 +38,9 @@ extension Roundable
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = imageView.frame.size.height / 2
         
-    }
+       
+        }
+  
 }
 
 protocol Borderable {
