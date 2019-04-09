@@ -63,15 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				076606B6225B4FCE00211377 /* AppDelegate.swift */,
+				076606C8225B502000211377 /* JsonStructure.swift */,
+				076606CB225B52A400211377 /* JsonCollectionViewCell.xib */,
+				076606CA225B52A400211377 /* JsonCollectionViewCell.swift */,
+				0794153F225B693400CBBD4B /* ImageData.swift */,
 				076606B8225B4FCE00211377 /* ViewController.swift */,
 				076606BA225B4FCE00211377 /* Main.storyboard */,
 				076606BD225B4FCF00211377 /* Assets.xcassets */,
 				076606BF225B4FCF00211377 /* LaunchScreen.storyboard */,
 				076606C2225B4FCF00211377 /* Info.plist */,
-				076606C8225B502000211377 /* JsonStructure.swift */,
-				076606CA225B52A400211377 /* JsonCollectionViewCell.swift */,
-				076606CB225B52A400211377 /* JsonCollectionViewCell.xib */,
-				0794153F225B693400CBBD4B /* ImageData.swift */,
 			);
 			path = "Mega Assignment";
 			sourceTree = "<group>";

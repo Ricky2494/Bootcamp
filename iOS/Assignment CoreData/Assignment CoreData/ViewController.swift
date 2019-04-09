@@ -11,7 +11,7 @@ import CoreData
 
 
 
-protocol DbElementPassable {
+protocol RecipeShared {
     func passElement(element : String )
 }
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController
     @IBOutlet weak var recipeTableView: UITableView!
     @IBOutlet weak var addRecipeButton: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
-    
+    @IBOutlet weak var logOutButton: UIButton!
     
     fileprivate lazy var fetchedResultController: NSFetchedResultsController<Recipe> = {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -35,7 +35,7 @@ class ViewController: UIViewController
         return fetchResultController
     }()
     
-    var delegate : DbElementPassable?
+    var delegate : RecipeShared?
     
     override func viewDidLoad()
     {
@@ -52,8 +52,12 @@ class ViewController: UIViewController
     
     }
 
-
-
+    @IBAction func clickLogoutButton(_sender: Any) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "UserLogin") as! UserLogin
+        UserDefaults.standard.removeObject(forKey: "Log In")
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func onAddRecipeButtonClick(_ sender: Any)
     {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
@@ -92,6 +96,21 @@ extension ViewController : NSFetchedResultsControllerDelegate{
         recipeTableView.endUpdates()
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            let context = appDelegate?.persistentContainer.viewContext
+            let recipe = fetchedResultController.object(at: indexPath)
+            context!.delete(recipe)
+            do {
+                try context!.save()
+                print("saved!")
+                //tableView.reloadData()
+            } catch {
+                
+            }
+        }
+    }
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         if(type == .delete)
         {

@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    
+    @IBOutlet weak var logOutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,8 +30,11 @@ class TabBarController: UITabBarController {
         
     }
     
-    
-
+    @IBAction func clickLogOutButton(_sender: Any) {
+        UserDefaults.standard.removeObject(forKey: "Log In")
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+}
     /*
     // MARK: - Navigation
 
@@ -40,4 +45,4 @@ class TabBarController: UITabBarController {
     }
     */
 
-}
+

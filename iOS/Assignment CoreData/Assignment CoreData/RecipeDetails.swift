@@ -19,6 +19,8 @@ class RecipeDetails: UIViewController
     @IBOutlet weak var ingredientsTextField: UITextField!
     @IBOutlet weak var favouriteSwitch: UISwitch!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+
     
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
@@ -34,6 +36,13 @@ class RecipeDetails: UIViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    @IBAction func clickBackButton(_sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+    }
+
     @IBAction func onSaveButton(_ sender: Any)
     {
         appendData(name: recipeNameTextField.text!, favourite: favouriteSwitch.isOn, time: timeTextField.text!, ingredients: ingredientsTextField.text!)

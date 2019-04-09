@@ -12,7 +12,7 @@ import CoreData
 class Favourites: UIViewController
 {
     @IBOutlet weak var favouriteTableView: UITableView!
-    
+    @IBOutlet weak var logOutButton: UIButton!
     
     fileprivate lazy var fetchedResultController: NSFetchedResultsController<Recipe> = {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -31,7 +31,11 @@ class Favourites: UIViewController
         super.viewDidLoad()
         favouriteTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
-    
+    @IBAction func clickLogOutButoon(_sender: Any) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "UserLogin") as! UserLogin
+        UserDefaults.standard.removeObject(forKey: "Log In")
+        self.navigationController?.popViewController(animated: true)    }
    
 }
 extension Favourites : UITableViewDataSource , UITableViewDelegate
@@ -48,7 +52,36 @@ extension Favourites : UITableViewDataSource , UITableViewDelegate
         cell.textLabel?.text = recipe1.name
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate
+            let context = appDelegate?.persistentContainer.viewContext
+            let recipe = fetchedResultController.object(at: indexPath)
+            context!.delete(recipe)
+            do {
+                try context!.save()
+                print("saved!")
+                //tableView.reloadData()
+            } catch {
+                
+            }
+        }
+    }
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        if(type == .delete)
+        {
+            favouriteTableView.deleteRows(at: [indexPath!] , with: .fade)
+            
+        }
+        if(type == .insert)
+        {
+            let currentIndexPath = self.fetchedResultController.indexPath(forObject: anObject as! Recipe)
+            if(currentIndexPath != nil)
+            {
+                self.favouriteTableView.insertRows(at: [currentIndexPath!], with: .fade)
+            }
+        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }

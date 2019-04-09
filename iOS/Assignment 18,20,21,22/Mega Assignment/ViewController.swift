@@ -68,7 +68,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let picDetails :  ImageData =  storyBoard.instantiateViewController(withIdentifier: "ImageData") as! ImageData
+        let picDetails =  storyBoard.instantiateViewController(withIdentifier: "ImageData") as! ImageData
         picDetails.openUrl = jsonDataArray[indexPath.row].author_url
         
         let imageurl = "https://picsum.photos/300/400?image=\(jsonDataArray[indexPath.row].id)"

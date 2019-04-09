@@ -18,8 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFc-X0-zCo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="y2u-7I-6xx"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Favourites" id="3xD-FQ-eFF">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="SlL-fg-9Jd">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ycb-e8-lb3">
+                                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Logout"/>
+                                                <connections>
+                                                    <action selector="clickLogOutButoonWith_sender:" destination="dbR-67-Tam" eventType="touchUpInside" id="Upk-2d-tec"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DeN-dL-Dlf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="dbR-67-Tam" id="4xk-XB-Cp3"/>
@@ -29,16 +49,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6n7-XJ-KvL" firstAttribute="trailing" secondItem="DeN-dL-Dlf" secondAttribute="trailing" id="41k-NB-OxX"/>
-                            <constraint firstItem="DeN-dL-Dlf" firstAttribute="top" secondItem="6n7-XJ-KvL" secondAttribute="top" id="Awi-bc-gVT"/>
-                            <constraint firstItem="6n7-XJ-KvL" firstAttribute="bottom" secondItem="DeN-dL-Dlf" secondAttribute="bottom" id="FqM-i1-9mt"/>
-                            <constraint firstItem="DeN-dL-Dlf" firstAttribute="leading" secondItem="6n7-XJ-KvL" secondAttribute="leading" id="iKx-40-Zxk"/>
+                            <constraint firstItem="eFc-X0-zCo" firstAttribute="trailing" secondItem="6n7-XJ-KvL" secondAttribute="trailing" id="6yT-hP-VT8"/>
+                            <constraint firstItem="DeN-dL-Dlf" firstAttribute="trailing" secondItem="6n7-XJ-KvL" secondAttribute="trailing" id="OHh-gU-Vqz"/>
+                            <constraint firstItem="DeN-dL-Dlf" firstAttribute="leading" secondItem="6n7-XJ-KvL" secondAttribute="leading" id="XHc-cz-0hx"/>
+                            <constraint firstItem="DeN-dL-Dlf" firstAttribute="top" secondItem="eFc-X0-zCo" secondAttribute="bottom" id="ipw-3Z-coo"/>
+                            <constraint firstItem="DeN-dL-Dlf" firstAttribute="bottom" secondItem="6n7-XJ-KvL" secondAttribute="bottom" id="lbB-X7-sTf"/>
+                            <constraint firstItem="eFc-X0-zCo" firstAttribute="leading" secondItem="6n7-XJ-KvL" secondAttribute="leading" id="q5M-lJ-9E0"/>
+                            <constraint firstItem="eFc-X0-zCo" firstAttribute="top" secondItem="6n7-XJ-KvL" secondAttribute="top" id="yWq-hc-m3H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6n7-XJ-KvL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favourites" id="5CS-3U-4jl"/>
                     <connections>
                         <outlet property="favouriteTableView" destination="DeN-dL-Dlf" id="SRX-8v-Z8R"/>
+                        <outlet property="logOutButton" destination="ycb-e8-lb3" id="O5p-Pa-EhE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGa-gm-HOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,11 +84,22 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Recipes" id="rm0-06-aIP">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="3OS-YL-Mhs">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fr0-JX-jZ6">
+                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Log Out"/>
+                                                <connections>
+                                                    <action selector="clickLogoutButtonWith_sender:" destination="U9S-Of-IYM" eventType="touchUpInside" id="2Pd-J1-dmg"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="MXw-CK-aYR">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="joD-IH-Ph8">
-                                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                                <rect key="frame" x="302" y="0.0" width="92" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="+"/>
                                                 <connections>
                                                     <action selector="onAddRecipeButtonClick:" destination="U9S-Of-IYM" eventType="touchUpInside" id="hWa-mq-kxk"/>
                                                 </connections>
@@ -98,6 +133,7 @@
                     <navigationItem key="navigationItem" id="ar5-af-BpU"/>
                     <connections>
                         <outlet property="addRecipeButton" destination="joD-IH-Ph8" id="gVj-tv-LG9"/>
+                        <outlet property="logOutButton" destination="Fr0-JX-jZ6" id="xKm-2d-cEA"/>
                         <outlet property="navBar" destination="LYI-1b-Pfo" id="6qe-He-4II"/>
                         <outlet property="recipeTableView" destination="gPc-lI-Cep" id="OMz-8p-c2E"/>
                     </connections>
@@ -175,12 +211,23 @@
                                     <action selector="onSaveButton:" destination="v6q-0b-DDW" eventType="touchUpInside" id="TUz-r6-XCN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmy-uw-zs4">
+                                <rect key="frame" x="10" y="364" width="394" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6rP-2l-hoM"/>
+                                </constraints>
+                                <state key="normal" title="Back Button"/>
+                                <connections>
+                                    <action selector="clickBackButtonWith_sender:" destination="v6q-0b-DDW" eventType="touchUpInside" id="r7S-Bt-twz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="sJ8-Jt-NeA" secondAttribute="trailing" constant="10" id="1I2-VO-TTN"/>
                             <constraint firstItem="vtQ-A4-dmn" firstAttribute="leading" secondItem="bW3-Xy-p1U" secondAttribute="trailing" constant="20" id="9gw-gf-nTg"/>
                             <constraint firstItem="0Uy-qv-0oN" firstAttribute="leading" secondItem="7Eo-hO-VfH" secondAttribute="leading" constant="10" id="9hX-eO-zgD"/>
+                            <constraint firstItem="Kmy-uw-zs4" firstAttribute="top" secondItem="0Uy-qv-0oN" secondAttribute="bottom" constant="20" id="CbS-Qt-2S0"/>
                             <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="bW3-Xy-p1U" secondAttribute="trailing" constant="150" id="EZC-DL-EdB"/>
                             <constraint firstItem="vtQ-A4-dmn" firstAttribute="top" secondItem="hMS-Ii-Xpx" secondAttribute="bottom" constant="20" id="FTQ-ix-YMj"/>
                             <constraint firstItem="hMS-Ii-Xpx" firstAttribute="leading" secondItem="7Eo-hO-VfH" secondAttribute="leading" constant="10" id="Nun-G0-S57"/>
@@ -195,7 +242,9 @@
                             <constraint firstItem="fTI-wn-SS0" firstAttribute="top" secondItem="sJ8-Jt-NeA" secondAttribute="bottom" constant="20" id="gQJ-V2-8e6"/>
                             <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="dHy-Kl-6qL" secondAttribute="trailing" constant="10" id="h1h-zN-HRk"/>
                             <constraint firstItem="sJ8-Jt-NeA" firstAttribute="top" secondItem="dHy-Kl-6qL" secondAttribute="bottom" constant="20" id="hGQ-mu-V5D"/>
+                            <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="Kmy-uw-zs4" secondAttribute="trailing" constant="10" id="mrr-WE-3gl"/>
                             <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="0Uy-qv-0oN" secondAttribute="trailing" constant="10" id="oyN-H0-HEI"/>
+                            <constraint firstItem="Kmy-uw-zs4" firstAttribute="leading" secondItem="7Eo-hO-VfH" secondAttribute="leading" constant="10" id="rnc-8q-un3"/>
                             <constraint firstItem="dHy-Kl-6qL" firstAttribute="top" secondItem="7Eo-hO-VfH" secondAttribute="top" constant="10" id="wEx-5D-T6b"/>
                             <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="fTI-wn-SS0" secondAttribute="trailing" constant="10" id="wwj-Sf-1e7"/>
                             <constraint firstItem="7Eo-hO-VfH" firstAttribute="trailing" secondItem="hMS-Ii-Xpx" secondAttribute="trailing" constant="10" id="x0t-vW-cbB"/>
@@ -203,6 +252,7 @@
                         <viewLayoutGuide key="safeArea" id="7Eo-hO-VfH"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Kmy-uw-zs4" id="2P6-ox-Awv"/>
                         <outlet property="favouriteSwitch" destination="vtQ-A4-dmn" id="aIz-bd-oST"/>
                         <outlet property="ingredientsTextField" destination="hMS-Ii-Xpx" id="Aec-gJ-kcy"/>
                         <outlet property="recipeNameTextField" destination="sJ8-Jt-NeA" id="jUZ-0F-Q7w"/>
@@ -217,7 +267,7 @@
         <!--User Login-->
         <scene sceneID="NrJ-Gy-Aks">
             <objects>
-                <viewController id="l5i-Cs-uwq" customClass="UserLogin" customModule="Assignment_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserLogin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="l5i-Cs-uwq" customClass="UserLogin" customModule="Assignment_CoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nnP-nV-8Nk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
