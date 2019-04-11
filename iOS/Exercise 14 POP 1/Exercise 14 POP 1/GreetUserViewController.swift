@@ -14,11 +14,14 @@ class GreetUserViewController: UIViewController,UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UserDetailsTableViewCell
+        
         cell.nameLabel.text = arrayOfUser[indexPath.row].fname
         cell.addressLabel.text = arrayOfUser[indexPath.row].address
         cell.phoneLabel.text = arrayOfUser[indexPath.row].phoneNumber
         cell.emailLabel.text = arrayOfUser[indexPath.row].email
+        cell.imageView?.image = arrayOfUser[indexPath.row].imageUser
         return cell
     }
     
@@ -31,25 +34,25 @@ class GreetUserViewController: UIViewController,UITableViewDelegate, UITableView
         employeeTable.dataSource = self
         employeeTable.delegate = self
         
-        let nib = UINib.init(nibName: "TableViewCell", bundle: nil)
+        let nib = UINib.init(nibName: "UserDetailsTableViewCell", bundle: nil)
         employeeTable.register(nib, forCellReuseIdentifier: "cell")
         employeeTable.reloadData()
         
         // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        customView.backgroundColor = UIColor.white
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        button.setTitle("BACK", for: .normal)
-        
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        button.backgroundColor = UIColor.blue
-        customView.addSubview(button)
-        
-        return button
-    }
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+//        customView.backgroundColor = UIColor.white
+//        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+//        button.setTitle("go to root", for: .normal)
+//
+//        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+//        button.backgroundColor = UIColor.blue
+//        customView.addSubview(button)
+//
+//        return button
+//    }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50.0
     }
@@ -60,7 +63,7 @@ class GreetUserViewController: UIViewController,UITableViewDelegate, UITableView
     }
     
     
-    @objc func buttonAction(){
-        self.navigationController?.popToRootViewController(animated: true)
-    }
+//    @objc func buttonAction(){
+//        self.navigationController?.popToRootViewController(animated: true)
+//    }
 }

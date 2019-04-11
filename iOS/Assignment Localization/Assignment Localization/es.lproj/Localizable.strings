@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Location Services App
+
+    Created by Anindya Guha on 03/04/19.
+    Copyright © 2019 Anindya Guha. All rights reserved.
+*/
+
+"name" = "nombre";
+"state" = "estado";
+"country" = "paísd";
+"dateOfBirth" = "fecha de nacimiento";
+"lotteryWon" = "lotería ganada";

@@ -239,7 +239,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hor-wG-YxX">
-                                <rect key="frame" x="20" y="184" width="374" height="50"/>
+                                <rect key="frame" x="20" y="184" width="89.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3Wb-Gi-Y8R"/>
                                 </constraints>
@@ -248,7 +248,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gue-Oq-DhB">
-                                <rect key="frame" x="20" y="274" width="374" height="40"/>
+                                <rect key="frame" x="20" y="274" width="89.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="LYB-W2-Bcb"/>
                                 </constraints>
@@ -716,16 +716,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-XW-uM0">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ihw-Jq-3Ia">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ihw-Jq-3Ia" id="fwd-g3-Hde">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="obO-RR-vrp" id="Vr9-Sk-JB0"/>
                                     <outlet property="delegate" destination="obO-RR-vrp" id="wbg-el-Q0l"/>
